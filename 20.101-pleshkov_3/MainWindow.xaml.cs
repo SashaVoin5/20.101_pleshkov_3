@@ -30,14 +30,7 @@ namespace _20._101_pleshkov_3
         {
             try
             {
-                DataGridTextColumn textColumn = new DataGridTextColumn();
-                textColumn.Header = "Номер дисциплины"; //Добавляем столбцы в датагрид
-                textColumn.Binding = new Binding("IdDiscipline");
-                LoadData.Columns.Add(textColumn);
-                DataGridTextColumn textColumn1 = new DataGridTextColumn();
-                textColumn1.Header = "Наименование дисциплины"; 
-                textColumn1.Binding = new Binding("Title");
-                LoadData.Columns.Add(textColumn1);
+               
                 var discipline = Entities.GetContext().Discipline.Where(p => p.IdDiscipline == 2).ToList(); //Считываем из базы данных значения по условию IdDiscipline = 2
                 if (discipline.Count != 0)
                 {
